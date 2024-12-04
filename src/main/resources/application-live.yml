@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url:
+    driver-class-name:
+    username:
+    password:
+    maximum-pool-size: 10
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    database-platform: 請輸入方言
+  freemarker:
+    cache: true
+  mail:
+    host: "請輸入正式機 mail server"
+    port: 25
+tist:
+  admin:
+    debug: false
+    mail-from: online@tist.com.tw
+    #請配合自身tomcat路徑調整
+    upload: /webapps/upload
+    system-url: "請輸入正式機網址如: https://smart-welfare.hsinchu.gov.tw"

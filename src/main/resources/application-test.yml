@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url:
+    driver-class-name:
+    username:
+    password:
+    maximum-pool-size: 5
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    database-platform: 請輸入方言
+  mail:
+    host: casarray.systex.tw
+    port: 25
+    username: online
+    password: KEqwp#5283ws
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+tist:
+  admin:
+    debug: false
+    mail-from: online@tist.com.tw
+    upload: D:\upload
+    system-url: "請輸入測試機網址如: http://smart-welfare.tist.com.tw/"
+debug: false

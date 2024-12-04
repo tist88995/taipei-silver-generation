@@ -1,0 +1,54 @@
+tist:
+  admin:
+    system-name: 請輸入系統名稱
+    system-id: 請輸入系統代碼
+    theme: 請輸入系統代碼
+    max-depart-level: 5
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
+  freemarker:
+    enabled: true
+    cache: true
+    prefix: ${tist.admin.theme}/
+    suffix: .ftl
+    settings:
+      template_exception_handler: ignore
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      write-dates-as-timestamps: false
+  profiles:
+    active: live
+  session:
+    store-type: none
+  servlet:
+    multipart:
+      max-file-size: 40MB
+      max-request-size: 50MB
+  jmx:
+    enabled: false
+  web:
+    resources:
+      cache:
+        period: 86400s
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  servlet:
+    session:
+      cookie:
+        name: JSESSIONID
+  compression:
+    enabled: true
+logging:
+  level:
+    org:
+      hibernate: FATAL
