@@ -1,17 +1,16 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url:
-    driver-class-name:
-    username:
-    password:
+    url: jdbc:sqlserver://10.111.1.206:1433;databaseName=taipei_silver_generation
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: silverusr
+    password: Tist24231451
     maximum-pool-size: 5
   jpa:
     generate-ddl: false
     show-sql: false
-    database-platform: 請輸入方言
   mail:
-    host: casarray.systex.tw
+    host: mail.systex.tw
     port: 25
     username: online
     password: KEqwp#5283ws
@@ -21,10 +20,14 @@ spring:
           auth: true
           starttls:
             enable: true
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: lazy
 tist:
   admin:
     debug: false
     mail-from: online@tist.com.tw
-    upload: D:\upload
-    system-url: "請輸入測試機網址如: http://smart-welfare.tist.com.tw/"
+    upload: /webapps/upload/taipei-silver-generation
+    system-url: https://bobi.tist.com.tw/taipei-silver-generation
 debug: false

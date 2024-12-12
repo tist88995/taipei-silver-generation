@@ -1,17 +1,16 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url:
-    driver-class-name:
-    username:
-    password:
-    maximum-pool-size: 10
+    url: jdbc:sqlserver://10.111.1.206:1433;databaseName=taipei_silver_generation
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: silverusr
+    password: Tist24231451
+    maximum-pool-size: 5
   jpa:
-    generate-ddl: true
-    show-sql: true
-    database-platform: 請輸入方言
+    generate-ddl: false
+    show-sql: false
   mail:
-    host: casarray.systex.tw
+    host: mail.systex.tw
     port: 25
     username: online
     password: KEqwp#5283ws
@@ -27,8 +26,8 @@ spring:
         bootstrap-mode: lazy
 tist:
   admin:
-    debug: true
+    debug: false
     mail-from: online@tist.com.tw
     upload: D:\upload
     system-url: http://localhost
-debug: true
+debug: false

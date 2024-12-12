@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.tist</groupId>
-    <artifactId>請依專案命名</artifactId>
+    <artifactId>taipei-silver-generation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>請依專案命名</name>
-    <description>請依專案描述</description>
+    <name>臺北市銀髮族服務方案補助平台</name>
+    <description>臺北市銀髮族服務方案補助平台</description>
     <packaging>war</packaging>
     <properties>
         <java.version>1.8</java.version>
@@ -61,6 +61,27 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tist</groupId>
+            <artifactId>mgov-core-bulletin</artifactId>
+            <version>2.4.8.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.tist</groupId>
+                    <artifactId>mgov-core-kit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.tist</groupId>
+            <artifactId>mgov-core-jasperreports</artifactId>
+            <version>2.2.4.1</version>
         </dependency>
     </dependencies>
 

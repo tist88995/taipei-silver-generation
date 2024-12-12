@@ -1,13 +1,14 @@
 tist:
   admin:
-    system-name: 請輸入系統名稱
-    system-id: 請輸入系統代碼
-    theme: 請輸入系統代碼
+    system-name: 臺北市銀髮族服務方案補助平台
+    system-id: silver-generation
+    theme: silver-generation
     max-depart-level: 5
 spring:
   jpa:
     generate-ddl: false
     show-sql: false
+    database-platform: com.tist.jpa.dialect.MsSqlServerDbDialect
     properties:
       javax:
         persistence:
@@ -48,7 +49,35 @@ server:
         name: JSESSIONID
   compression:
     enabled: true
+  undertow:
+    max-parameters: 100000
 logging:
   level:
     org:
       hibernate: FATAL
+kaptcha:
+  session:
+    key: kaptcha.code
+    #border: no
+    #渲染效果：水纹：WaterRipple；鱼眼：FishEyeGimpy；阴影：ShadowGimpy
+  obscurificator:
+    impl: com.google.code.kaptcha.impl.ShadowGimpy
+    #不要噪点
+  noise:
+    impl: com.google.code.kaptcha.impl.NoNoise
+  image:
+    width: 90
+    height: 33
+  textproducer:
+    font:
+      size: 25
+      color: black
+    char:
+      length: 4
+      space: 5
+      string: 1234567890
+    #和登录框背景颜色一致
+  background:
+    clear:
+      from: 247,247,247
+      to: 247,247,247

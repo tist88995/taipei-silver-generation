@@ -1,0 +1,16 @@
+<#ftl output_format="HTML" />
+<#assign jqueryVersion="3.2.1" />
+<#assign bootstrapVersion="3.3.7" />
+<#assign fontAwesomeVersion="4.7.0" />
+<#assign ioniconsVersion="2.0.1" />
+<#assign jstreeVersion="3.3.3" />
+<#assign fontawesomeIconpickerVersion="1.2.2" />
+<#assign ckeditorVersion="4.7.0" />
+<#assign jsCookieVersion="2.1.3" />
+<#assign bootstrapNotifyVersion="3.1.3" />
+<#assign jqueryValidationVersion="1.16.0" />
+<#assign html5shivVersion="3.7.3" />
+<#assign respondVersion="1.4.2" />
+<#assign typeaheadjsVersion="0.11.1" />
+<#assign clockpickerVersion="0.0.7" />
+<#assign jspdfVersion="1.4.1" />
